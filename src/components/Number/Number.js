@@ -17,7 +17,7 @@ const Number = () => {
       </div>
       <div className="number-column">
         <div className="number">15</div>
-        <div className="desc">Awards achived</div>
+        <div className="desc">Awards achieved</div>
       </div>
     </div>
   )
