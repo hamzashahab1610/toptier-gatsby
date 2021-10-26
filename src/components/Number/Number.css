@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,700,500");
+
+.number-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  position: relative;
+  max-width: 80%;
+  margin: auto;
+}
+
+.number-column {
+  text-align: center;
+  margin: auto 4rem;
+}
+
+.number {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.desc {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.rectangle3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .number-container {
+    flex-direction: column;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .number-column {
+    text-align: center;
+    margin: 2rem auto;
+  }
+}

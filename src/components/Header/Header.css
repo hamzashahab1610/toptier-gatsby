@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,700,500");
+
+.rectangle1 {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  width: 7vw;
+}
+
+.rectangle2 {
+  position: absolute;
+  left: 60%;
+  bottom: -15%;
+  transform: translateX(-100%);
+  width: 4vw;
+}
+
+.header-container {
+  background-color: #fafbfa;
+  font-family: "DM Sans", sans-serif;
+  background-image: url("../../assets/banner.png");
+  background-size: 50%;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.header-content {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-left {
+  width: 100%;
+}
+
+.header-right {
+  width: 100%;
+  visibility: hidden;
+}
+
+.header-right img {
+  width: 100%;
+}
+
+.greet {
+  font-size: 48px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.grade {
+  font-size: 64px;
+
+  margin: 0;
+}
+
+.bookBtn {
+  background-color: #54c9cc;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    background: none;
+    background-color: #fafbfa;
+    padding-bottom: 3rem;
+  }
+
+  .header-content {
+    flex-direction: column-reverse;
+    max-width: 100%;
+  }
+
+  .header-right {
+    width: 100%;
+    visibility: visible;
+  }
+
+  .greet {
+    font-size: 24px;
+  }
+
+  .grade {
+    font-size: 36px;
+  }
+
+  .header-left {
+    width: 90%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+}
