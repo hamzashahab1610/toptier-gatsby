@@ -6,8 +6,16 @@ import Burger from "../../assets/burger.png"
 import { Link } from "gatsby"
 
 const Navbar = () => {
-  const [isOpen, setisOpen] = useState(false)
-  console.log("isOpen", isOpen)
+  const [isOpen, setisOpen] = useState()
+  const [animationState, setanimationState] = useState()
+
+  const collapseHandler = isOpen => {
+    setisOpen(isOpen)
+
+    if (isOpen) setanimationState("openNav")
+    else setanimationState("closeNav")
+  }
+
   return (
     <div className="nav-container">
       <img src={Logo} className="logo" />
@@ -29,33 +37,31 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className="nav-collapse" onClick={e => setisOpen(!isOpen)}>
+      <div className="nav-collapse" onClick={e => collapseHandler(!isOpen)}>
         <img src={Burger} alt="" />
       </div>
 
-      {isOpen && (
-        <div className="collapse">
-          <div className="close" onClick={e => setisOpen(false)}>
-            <img width="15px" src={Close} alt="" />
-          </div>
-
-          <Link to="#" className="collapse-link">
-            Home
-          </Link>
-          <Link to="#" className="collapse-link">
-            About me
-          </Link>
-          <Link to="#" className="collapse-link">
-            Freebies
-          </Link>
-          <Link to="#" className="collapse-link">
-            Blog
-          </Link>
-          <Link to="#" className="collapse-link">
-            Contact
-          </Link>
+      <div className={`collapse ${animationState}`}>
+        <div className="close" onClick={e => collapseHandler(!isOpen)}>
+          <img width="15px" src={Close} alt="" />
         </div>
-      )}
+
+        <Link to="#" className="collapse-link">
+          Home
+        </Link>
+        <Link to="#" className="collapse-link">
+          About me
+        </Link>
+        <Link to="#" className="collapse-link">
+          Freebies
+        </Link>
+        <Link to="#" className="collapse-link">
+          Blog
+        </Link>
+        <Link to="#" className="collapse-link">
+          Contact
+        </Link>
+      </div>
     </div>
   )
 }

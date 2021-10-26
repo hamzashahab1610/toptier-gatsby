@@ -71,6 +71,7 @@
     background-color: white;
     width: 90%;
     z-index: 1;
+    transform: translateY(-100%);
   }
 
   .collapse-link {
@@ -79,5 +80,31 @@
     display: block;
     text-decoration: none;
     color: #081313;
+  }
+}
+
+.openNav {
+  animation: navbarOpen 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes navbarOpen {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.closeNav {
+  animation: navbarClose 0.5s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes navbarClose {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-100%);
   }
 }
